@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\resizebox{1.0\textwidth}{!}{%
+\begin{tabular}{@{}lccccccc@{}}
+    \toprule
+    \textbf{Model} & \textbf{Encoder Layers} & \textbf{Decoder Layers} & \textbf{Model Dims} & \textbf{MLP Dims} & \textbf{Heads} & \textbf{Total Params}\\ 
+    \midrule
+    \bdraw-350M & 12 & 12 & 1024 & \pz4096 & 16 & 350M \\
+    \bdraw-750M & 12 & 36 & 1024 & \pz4096 & 16 & 750M \\
+    \bdraw-3B & 12 & 36 & 2048 & \pz8192 & 32 & \pzz3B \\
+    \bdraw & 16 & 64 & 4096 & 16384 & 64 & \pz20B \\
+    \bottomrule
+\end{tabular}
+}\\[.3cm]
+\caption{\label{tabs:bdraw_variants} Size variants of \bdraw. Both encoder and decoder are based on Transformers~\cite{vaswani2017attention}. The self-attention layer in decoder transformer is causally masked. Parameters of ViT-VQGAN image tokenization are not included in the total parameter count and can be found in Section~\ref{secs:tokenizer}.}
+\end{table}

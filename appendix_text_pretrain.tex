@@ -1,0 +1,13 @@
+\section{Encoder Pretraining} \label{secs:appendix_encoder_pretraining}
+\input{tables/text_pretrain_glue}
+
+\input{figures/encoder_pretrain_ablation}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/text_pretraining_losscurve.pdf}
+\caption{Ablation of text encoder pretraining. We plot text-to-image generation softmax cross-entropy training loss. The training of pretrained text encoder is only slightly better. Both models are with 3B parameters trained on the same mixture of datasets for ablation.}
+\label{figs:text_pretrain_loss}
+\end{figure}
+
+While it is straightforward to warm-start the model with a pretrained text encoder, we observe the text-encoder pretraining \textit{very marginally} helps text-to-image generation loss with 3B-parameter \bdraw models. Qualitative examples are shown in Figure~\ref{figs:enc_pretrain} and quantitative loss comparison is shown in Figure~\ref{figs:text_pretrain_loss}. We leave this observation as a future research topic on the difference and unification of generic language understanding and visually-grounded language understanding.

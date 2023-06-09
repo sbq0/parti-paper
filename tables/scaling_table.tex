@@ -1,0 +1,22 @@
+\begin{figure}[tbh!]
+\centering
+\resizebox{0.28\textwidth}{!}{
+\begin{tabular}[b]{lc}
+\toprule
+\multicolumn{2}{c}{\textbf{MS-COCO (zero-shot)}} \\
+\textbf{Parameters} & \textbf{FID $\downarrow$} \\
+\toprule
+ 350M & 14.10 \\
+ 750M & 10.71 \\
+ \pzz3B  & \pz8.10 \\
+ \pz20B  & \pz\fid \\
+\bottomrule
+\vspace{0.15in}
+\end{tabular}
+}
+\qquad
+\includegraphics[width=0.64\textwidth]{figures/losscurve.pdf}
+\caption{Effects of scaling \bdraw models of different sizes.
+We show zero-shot FID scores \textit{(left)} on MS-COCO (2014) and the training loss curves of the corresponding models \textit{(right)}.}
+\label{tabs:scaling_results}
+\end{figure}

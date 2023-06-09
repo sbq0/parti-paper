@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Model} & \textbf{CoLa}$ (\uparrow$) & \textbf{SST2} ($\uparrow$) & \textbf{RTE} ($\uparrow$) & \textbf{MRPC} ($\uparrow$) & \textbf{QQP} ($\uparrow$) & \textbf{QNLI} ($\uparrow$) \\
+\midrule
+BERT & 54.6 & 92.5 & 62.5 & 87.6 & 87.4 & 91.0 \\
+\midrule
+UNITER & 37.4 & 89.7 & 55.6 & 80.3 & 85.7 & 86.0 \\
+SimVLM & 46.7 & 90.9 & 63.9 & 84.4 & 87.2 & 88.6 \\
+CLIP & 25.4 & 88.2 & 55.2 & 65.0 & 53.9 & 50.5 \\
+FLAVA & 50.7 & 90.9 & 57.8 & 86.9 & 87.2 & 87.3 \\
+\midrule
+Encoder after encoder pretraining & 55.2 & 95.9 & 59.0 & 90.9 & 88.5 & 90.1 \\
+\midrule
+Encoder after encoder-decoder training \\
+\quad (w/o encoder pretraining) & 15.7 & 82.5 & 49.5 & 81.5 & 76.8 & 66.6  \\
+\quad (w/ encoder pretraining) & 20.4 & 84.8 & 53.4 & 78.3 & 76.7 & 78.2  \\
+\bottomrule
+\end{tabular}
+}
+\caption{Results of \bdraw text encoder on the GLUE benchmark after pretraining with joint BERT and CLIP objectives or (continued) training with text-to-image generation objective.}
+\label{table:glue_results}
+\end{center}
+\end{table*}

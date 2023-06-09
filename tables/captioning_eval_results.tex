@@ -1,0 +1,27 @@
+\begin{table}
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+Approach & BLEU ($\uparrow$) & METEOR ($\uparrow$) & CIDEr ($\uparrow$) & SPICE ($\uparrow$) \\
+\toprule
+Random Train Images & \pz4.4 & \pz9.2 & \pz4.8 & \pz2.0 \\
+Retrieval Baseline & 24.7 & 23.9 & 84.1 & 16.6 \\
+Ground Truth (upper bound) & 32.5 & 27.5 & 108.3\pz & 20.4 \\
+\midrule
+DALL-E\textsuperscript{Small}\footnotemark[5]     & \pz9.3  & 12.9 & 20.2  & \pz5.6 \\
+ruDALL-E-XL\footnotemark[6]    & 13.9 & 16.0 & 38.7  & \pz8.7  \\
+minDALL-E \cite{mindalle}       & 16.6 & 17.6 & 48.0  & 10.5 \\
+X-LXMERT \cite{Cho2020XLXMERTPC}        & 18.5 & 19.1 & 55.8  & 12.1 \\
+\midrule
+\bdraw & \textbf{26.4} & \textbf{23.9} & \textbf{83.9} & \textbf{16.5} \\
+\bottomrule
+\end{tabular}
+\vspace{0.1in}
+\caption{Comparison with prior work on captioner evaluation on the MS-COCO 5K test set \cite{Karpathy2017DeepVA} with baselines from DALL-Eval~\cite{Cho2022DallEval}. Ground Truth represents the theoretical upper bound on this evaluation with captions generated using MS-COCO images as inputs to the VL-T5 model~\cite{cho2021vlt5}. \bdraw samples 16 images per text prompt and uses a CoCa~\cite{yu2022coca} model to rank the outputs (Section~\ref{secs:sampling_cf_coca}). \label{tabs:image-text-auto}}
+\vspace{-0.2in}
+\end{center}
+\end{table}
+
+\footnotetext[5]{\url{https://github.com/lucidrains/DALLE-pytorch}}
+\addtocounter{footnote}{1}
+\footnotetext[6]{\url{https://rudalle.ru}}
+\addtocounter{footnote}{1}

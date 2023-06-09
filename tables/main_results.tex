@@ -1,0 +1,33 @@
+\begin{table*}[t]
+\begin{center}
+\scriptsize
+\setlength\tabcolsep{2pt}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccc@{\hspace{4mm}}cc}
+\multicolumn{1}{l}{\multirow{2}{*}{\textbf{Approach}}} && \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Model Type}}} && \multicolumn{2}{c}{\textbf{MS-COCO FID ($\downarrow$)}} && \multicolumn{2}{c}{\textbf{LN-COCO FID ($\downarrow$)}} \\
+\cmidrule{5-6} \cmidrule{8-9}
+& && & Zero-shot & Finetuned & & Zero-shot & Finetuned  \\
+\toprule
+Random Train Images~\cite{gafni2022make}  && - && \multicolumn{2}{c}{2.47} && \multicolumn{2}{c}{-} \\
+Retrieval Baseline  && -   &&  17.97 & \pz6.82  && 33.59 & 16.48   \\
+\midrule
+TReCS~\cite{trecs2020}  && GAN & & - & - &  & - & 48.70  \\
+XMC-GAN~\cite{zhang2021cross}  && GAN & & - & \pz9.33 &  & - & 14.12  \\
+DALL-E~\cite{ramesh2021zero}  && Autoregressive  & & $\sim$28\pzz\pzz & - &  & - & -   \\
+CogView~\cite{ding2021cogview}  && Autoregressive & & 27.1\pz & - & & - & -    \\
+CogView2~\cite{cogview2}  && Autoregressive & & 24.0\pz & 17.7\pz & & - & -    \\
+GLIDE~\cite{nichol2021glide}  && Diffusion & & 12.24 & - &  & - & -     \\
+Make-A-Scene~\cite{gafni2022make}  && Autoregressive & & 11.84 & \pz7.55 &  & - & -     \\
+DALL-E 2~\cite{ramesh2022hierarchical}  && Diffusion & & 10.39 & - &  & - & -   \\
+Imagen~\cite{imagen}  && Diffusion & & \pz\textbf{7.27} & - &  & - & -   \\
+\midrule
+\bdraw  &&  Autoregressive  && \pz\textbf{\fid} & \pz\textbf{\fidft} && \textbf{15.97} & \pz\textbf{8.39} \\
+\bottomrule
+\end{tabular}
+}
+\caption{Comparison with previous work on the MS-COCO (2014)~\cite{lin2014microsoft} and Localized Narratives (COCO split)~\cite{PontTuset_eccv2020} validation sets. When available, we report results for both zero-shot and finetuned models. Retrieval models either perform retrieval over our training set (``zero-shot''), or the respective MS-COCO and LN-COCO training sets (``finetuned''). \bdraw samples 16 images per text prompt and uses a CoCa model to rank the outputs (Section~\ref{secs:sampling_cf_coca}). Similar to DALL-E 2~\cite{ramesh2022hierarchical}, we use guidance scale 1.2 for all above results. We report zero-shot FID score of other model sizes in Figure~\ref{tabs:scaling_results}.
+}
+\label{table:coco_results}
+\end{center}
+\vspace{-0.2in}
+\end{table*}

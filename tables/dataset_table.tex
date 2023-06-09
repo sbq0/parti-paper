@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\begin{center}
+\footnotesize
+\setlength\tabcolsep{2pt}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccccp{4.5cm}ll}
+\toprule
+\normalsize Dataset && \normalsize Train & \normalsize Val & & \normalsize AvgWords && \normalsize \centering Caption  && \normalsize Image   \\
+\midrule
+MS-COCO (2014)~\cite{lin2014microsoft} && 82K & 40K &&  10.5 && \textit{``A bowl of broccoli and apples with a utensil.''} &&   \multirow{2}{*}{\includegraphics[height=1.65in,width=1.65in]{figures/COCO_val2014_000000551660.jpg}} \\[0.35cm]
+Localized Narratives\\ (COCO subset) ~\cite{PontTuset_eccv2020} && 134K & 8K  && 42.1 && \textit{``In this picture, we see a bowl containing the chopped apples and broccoli. In the background, we see a white table on which seeds or grains, broccoli, piece of fruit, water glass and plates are placed. This table is covered with a white and blue color cloth. This picture is blurred in the background.''} &&  \\
+\bottomrule
+\end{tabular}
+}
+\caption{Evaluation data statistics and examples. Images from the COCO portion of Localized Narratives come from the MS-COCO (2017) set; Localized Narratives descriptions are four times the length of captions in MS-COCO on average. The example above highlights the massive difference in detail between MS-COCO and Localized Narratives for the \textit{same} image.}
+\label{tabs:datasets}
+\end{center}
+\end{table*}

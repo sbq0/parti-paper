@@ -1,0 +1,56 @@
+\begin{figure}[ht!]
+    \centering 
+    \setlength{\tabcolsep}{2.0pt}
+    \begin{tabular}{cccccc}
+        \rotatebox{90}{\scriptsize\phantom{AAAA} Real Image} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/original/0.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/original/1.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/original/2.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/original/3.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/original/4.jpg} \\
+        
+        \rotatebox{90}{\scriptsize\phantom{AAAAA} DALL-E} &                         
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/dalle/0.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/dalle/1.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/dalle/2.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/dalle/3.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/dalle/4.jpg} \\
+        
+        \rotatebox{90}{\scriptsize\phantom{AAAAA} GLIDE} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/glide/0.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/glide/1.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/glide/2.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/glide/3.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/glide/4.jpg} \\
+
+        \rotatebox{90}{\scriptsize\phantom{AAA} Make-A-Scene} & 
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/makeascene/0.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/makeascene/1.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/makeascene/2.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/makeascene/3.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/makeascene/4.jpg} \\
+
+        \rotatebox{90}{\scriptsize\phantom{AAAA} DALL-E 2} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/unclip/0_upsample.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/unclip/1_upsample.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/unclip/2_upsample.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/unclip/3_upsample.jpg} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/unclip/4_upsample.jpg} \\
+
+        \rotatebox{90}{\scriptsize\phantom{AAAAA} \bdraw} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/parti/0} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/parti/1} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/parti/2} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/parti/3} &
+        \includegraphics[width=0.19\textwidth]{figures/model_comparison/parti/4} \\
+
+        & \scriptsize \makecell{``a green train is coming \\ down the tracks''} 
+        & \scriptsize \makecell{``a group of skiers are \\ preparing to ski down \\ a mountain.''}
+        & \scriptsize \makecell{``a small kitchen with \\ a low ceiling''}          
+        & \scriptsize \makecell{``a group of elephants \\ walking in muddy \\ water.''}
+        & \scriptsize \makecell{``a living area with a \\ television and a table''}
+    \end{tabular}                                                                   
+    \caption{Qualitative comparison of zero-shot images sampled (not cherry picked) from \bdraw and other models on MS-COCO prompts. \bdraw model samples 16 images per text prompt and uses a CoCa model~\cite{yu2022coca} for re-ranking (Section~\ref{secs:sampling_cf_coca}).}
+    \label{figs:coco_model_comparison}
+    \vskip -0.2in
+\end{figure}
